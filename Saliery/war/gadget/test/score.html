@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript" src="waveemu.js"></script>
+
+<script type="text/javascript" src="../util.js"></script>
+<script type="text/javascript" src="../score.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+<img id="score" onClick="showMenu(event)" onLoad="imageLoaded()" style="display: none"/>
+<img id="loading" src="../icons/Loading.gif" style="display: none; position: absolute"/>
+<div id="menu" style="display: none; position: absolute"/>
+	<img src="../icons/EditSource.png" title="Edit Source" onClick="editSource()"/>
+	<img src="../icons/Grow.png" title="Grow" onClick="grow()"/>
+	<img src="../icons/Shrink.png" title="Shrink" onClick="shrink()"/>
+	<img src="../icons/OriginalSize.png" title="Original Size" onClick="originalSize()"/>
+</div>
+<div id="editor">
+	<table>
+		<tr>
+			<td/>
+			<td><img src="../icons/Up.png" onClick="$('source').rows -= 1"/></td>
+			<td/>
+		</tr>
+		<tr>
+			<td><img src="../icons/Left.png" onClick="$('source').cols -= 1"/></td>
+			<td><img src="../icons/Done.png" title="Done (Shift+Enter)" onClick="done()"/></td>
+			<td><img src="../icons/Right.png" onClick="$('source').cols += 1"/></td>
+		</tr>
+		<tr>
+			<td/>
+			<td><img src="../icons/Down.png" onClick="$('source').rows += 1"/></td>
+			<td/>
+		</tr>
+	</table>
+	<form action="">
+		<textarea id="source" cols="32" rows="8" title="LilyPond Source" onKeyPress="keyPressed(event)"></textarea>
+	</form>
+</div>
+
+</body>
+</html>

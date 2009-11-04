@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Saliery</title>
+</head>
+<body>
+<h1>Saliery</h1>
+<p>Saliery is a set of Google Wave extensions which lets you include and edit musical examples in your waves in <a href="http://www.salieri.org/GUIDO">GUIDO</a> format.</p>
+<p>GUIDO has a simple syntax. If you are not familiar with it, you can start learning it <a href="http://www.ccarh.org/courses/253/lab/guido">here</a>.</p>
+<h2>Installation</h2>
+<p>You can install the extensions from the public wave entitled Saliery Extension Installer. Search for <code>saliery extension installer with:public</code>, and in the first search result, click <em>Install extension</em>.</p>
+<h2>Gadget</h2>
+<p>After installation, when you're writing a wave, you can use the <em>Add Score</em> toolbar icon to insert a score at the cursor position. Or alternatively, you can add the gadget manually from <a href="http://saliery-wave.appspot.com/gadget/score.xml">http://saliery-wave.appspot.com/gadget/score.xml</a>.</p>
+<p>A text box appears in which you can edit the GUIDO source. While editing, you can resize it with the arrows to fit the text; when you're done, submit it with the tick mark or by pressing <em>Alt+Enter</em>.</p>
+<p>The GUIDO source is rendered after a while. You should see your score now. If you want to correct or augment it, you can update its source by clicking on the score and selecting <em>Edit Source</em> from the popup menu. You can also increase or decrease its size, or reset it to the default value.</p>
+<h2>Robot</h2>
+<p>There is a more convenient way to insert scores into your message: the robot will automatically recognize music fragments in your messages. Just create a <em>New Wave with Auto-Scores</em> from the New Wave menu. If you did not install the extension, or you want to enhance an already existing wave with this capability, add the robot at <a href="mailto:saliery-wave@appspot.com">saliery-wave@appspot.com</a> as a participant to the wave.</p>
+<p>You have to start and end GUIDO code snippets describing your music with a special string called tag: <code>@@</code> (double at sign). When your message is submitted, GUIDO code snippets will be replaced with the gadget containing the corresponding sheet music.</p>
+<p>For example, <code>@@[ c ]@@</code> gets substituted by <img src="images/example.gif"/>.</p>
+<p>If you want to insert the tag (<code>@@</code>) into your message as text, write it twice (<code>@@@@</code>) &ndash; but if you edit the message later, be aware that the Saliery robot will interpret it! Unfortunately, there is no way to insert the tag this way into GUIDO code snippets; you have to edit the GUIDO source of the score gadget after it is inserted.</p>
+</body>
+</html>

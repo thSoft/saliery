@@ -1,0 +1,20 @@
+<extension
+		name="Saliery"
+		thumbnailUrl="http://saliery-wave.appspot.com/images/avatar.png"
+		description="Write sheet music in your waves! Insert any GUIDO code between @@...@@.">
+	<author name="thSoft"/>
+	<menuHook
+			location="toolbar"
+			text="Add Score"
+			iconUrl="http://saliery-wave.appspot.com/installer/gadget.png">
+		<insertGadget url="http://saliery-wave.appspot.com/gadget/score.xml"/>
+	</menuHook>
+	<menuHook
+			location="newwavemenu"
+			text="New Wave with Auto-Scores"
+			iconUrl="http://saliery-wave.appspot.com/installer/robot.png">
+		<createNewWave>
+			<participant id="saliery-wave@appspot.com"></participant>
+		</createNewWave>
+	</menuHook>
+</extension>
