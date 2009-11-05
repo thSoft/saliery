@@ -30,7 +30,9 @@ public class SalieryServlet extends AbstractRobotServlet {
 		boolean guido = false;
 		for (String section : sections) {
 			if (section.length() == 0) { // The tag itself can be achieved by writing it twice
-				textView.append(TAG);
+				if (guido) {
+					textView.append(TAG);
+				}
 			} else {
 				if (guido) { // GUIDO code is replaced with the score gadget created from it
 					Gadget scoreGadget = new Gadget(SalieryProfileServlet.URL + "/gadget/score.xml");
