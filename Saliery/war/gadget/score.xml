@@ -14,8 +14,10 @@
 
 <img id="score" onClick="showMenu(event)" onLoad="imageLoaded()" style="display: none"/>
 <img id="loading" src="http://saliery-wave.appspot.com/gadget/icons/Loading.gif" style="display: none; position: absolute"/>
+<span id="midicontainer"/>
 <div id="menu" style="display: none; position: absolute"/>
 	<img src="http://saliery-wave.appspot.com/gadget/icons/EditSource.png" title="Edit Source" onClick="editSource()"/>
+	<img src="http://saliery-wave.appspot.com/gadget/icons/Play.png" title="Play" onClick="play()"/>
 	<img src="http://saliery-wave.appspot.com/gadget/icons/Grow.png" title="Grow" onClick="grow()"/>
 	<img src="http://saliery-wave.appspot.com/gadget/icons/Shrink.png" title="Shrink" onClick="shrink()"/>
 	<img src="http://saliery-wave.appspot.com/gadget/icons/OriginalSize.png" title="Original Size" onClick="originalSize()"/>
@@ -23,8 +25,7 @@
 <div id="editor" style="display: none">
 	<table>
 		<tr><td/><td><img src="http://saliery-wave.appspot.com/gadget/icons/Up.png" onClick="$('source').rows -= 1"/></td><td/></tr>
-		<tr><td><img src="http://saliery-wave.appspot.com/gadget/icons/Left.png" onClick="$('source').cols -= 1"/></td><td><img src="http://saliery-wave.appspot.com/gadget/icons/Done.png" title="Done (Shift+Enter)" onClick="done()"/>
-</td><td><img src="http://saliery-wave.appspot.com/gadget/icons/Right.png" onClick="$('source').cols += 1"/></td></tr>
+		<tr><td><img src="http://saliery-wave.appspot.com/gadget/icons/Left.png" onClick="$('source').cols -= 1"/></td><td><img src="http://saliery-wave.appspot.com/gadget/icons/Done.png" title="Done (Alt+Enter)" onClick="done()"/></td><td><img src="http://saliery-wave.appspot.com/gadget/icons/Right.png" onClick="$('source').cols += 1"/></td></tr>
 		<tr><td/><td><img src="http://saliery-wave.appspot.com/gadget/icons/Down.png" onClick="$('source').rows += 1"/></td><td/></tr>
 	</table>
 	<form action="">

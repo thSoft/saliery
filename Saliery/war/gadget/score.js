@@ -1,4 +1,4 @@
-const services = ["http://clef.cs.ubc.ca/scripts/salieri/gifserv.pl"];
+const services = ["http://clef.cs.ubc.ca/scripts/salieri/"];
 
 const defaultSize = 0.9;
 
@@ -31,13 +31,15 @@ function setSize(size) {
 function stateUpdated() {
 	hide($("menu"));
 	if (getSource()) {
+		source = getSource();
+		encodedSource = encodeURIComponent(source);
 		$("loading").style.left = Math.max($("score").offsetLeft + $("score").width / 2 - $("loading").width / 2, 0);
 		$("loading").style.top = Math.max($("score").offsetTop + $("score").height / 2 - $("loading").height / 2, 0);
 		show($("loading"));
 		$("score").style.opacity = 0.5;
 		score = $("score");
-		score.src = services[random(services.length)] + "?gmndata=" + encodeURIComponent(getSource()) + "&zoom=" + getSize() + "&crop=yes";
-		score.title = getSource();
+		score.src = services[random(services.length)] + "gifserv.pl?gmndata=" + encodedSource + "&zoom=" + getSize() + "&crop=yes";
+		score.title = source;
 	} else {
 		show($("editor"));
 	}
@@ -75,6 +77,19 @@ function done() {
 		hide($("editor"));
 		setSource($("source").value);
 	}
+}
+
+function play() {
+	if ($("midi")) {
+		$("midicontainer").removeChild($("midi"));
+	}
+	midi = document.createElement("object");
+	midi.id = "midi";
+	midi.data = services[random(services.length)] + "midserv.pl?gmndata=" + encodeURIComponent(getSource());
+	midi.type = "audio/x-midi";
+	midi.width = 0;
+	midi.height = 0;
+	$("midicontainer").appendChild(midi);
 }
 
 function grow() {
